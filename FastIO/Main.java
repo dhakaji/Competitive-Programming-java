@@ -55,7 +55,16 @@ class DhakaJi {
         P = Arrays.copyOf(P, j);
         return j;
     }
-
+    long gcd(long a,long b){
+        while (a!=0 && b!=0) 
+        {
+            if(a>b)
+                a%=b;
+            else
+                b%=a;
+        }
+        return a+b;
+    }
     long mp(long b, long e, long mod) {
         b %= mod;
         long r = 1;
